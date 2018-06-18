@@ -1,4 +1,4 @@
-BasicToDoList
+# BasicToDoList
 * Add and edit tasks
 
 WIP:
