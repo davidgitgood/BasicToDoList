@@ -34,6 +34,14 @@ public class MainActivity extends AppCompatActivity {
                 startActivityForResult(editItem, Task_Constants.EDIT_ENTRY_REQUEST);
             }
         });
+        taskListView.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+            @Override
+            public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
+                tasks.remove(position);
+                taskDisplayAdapter.notifyDataSetChanged();
+                return true;
+            }
+        });
     }
 
     public void addButtonClicked(View view) {
